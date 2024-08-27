@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    font-family: "Lato", sans-serif;
+
+    --lilas: #c2bff4; 
+    --cor-fundo-section: #6D67D0;
+
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+main{
+    background:url(assets/Background.png) no-repeat center/cover;
+
+    display: grid;
+    place-content: center;
+    gap: 2.4rem;
+
+    min-height: 100vh;
+}
+
+section.temperature-now{
+    background: url(assets/Temperature\ Now.jpg);
+    border-radius: 1rem;
+
+    width: 48rem;
+    height: 48rem ;
+
+    position: relative;
+
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.temperature-now::before{
+    content: "";
+    height: 17.6rem;
+    width: 17.6rem;
+
+    background: url(assets/clouds.svg);
+    
+    position: absolute;
+    top: -5.6rem;
+    left: -5.6rem;
+}
+
+.location{
+    justify-self: end;
+
+    padding: 3.2rem 3.2rem 0;
+
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+
+    font-size: 1.4rem;
+    color: var(--lilas);
+}
+
+.temp{
+    margin: 6rem;
+
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+
+    gap: .4rem;
+}
+
+.temp .number{
+    text-align: center;
+
+    font-size: 8.8rem;
+    color: #ffffffff;
+
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.temp .number .minmax{
+    font-size: 2rem;
+}
+
+.temp .number .minmax span{
+    color: var(--lilas);
+}
+
+.celcios{
+    margin-top: 1.5rem;
+    
+    font-size: 2.4rem;
+    color: #dad8f7;
+}   
+
+.statistic{
+    padding: 1.2rem;
+    
+    display: flex;
+   
+    gap: 0.8rem;
+}
+
+.stats{    
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    width: 14.6rem;
+    height: 6rem;
+
+    padding: 1.2rem 1.6rem;
+    gap: 1.2rem;
+
+    background-color: rgba(102, 96, 200, 0.6);
+
+    border-radius: .6rem;
+}
+
+
+.stats .info{
+    color: #E7E6FB;
+}
+
+.stats .info span{
+    font-size: 1.4rem;
+}
+.stats .info p{
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: baseline;
+    gap: .4rem;
+}
+
+.stats h1{
+
+    font-size: 1.2rem;
+}
+
+/* Segunda section */
+
+section.air-quality{
+    background-color: var(--cor-fundo-section);
+    border-radius: 1rem;
+
+    text-align: center;
+    display: grid;
+}
+
+h1.title{
+    color: #DAD8F7;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+    margin-top: 3.2rem;
+}
+
+.air-quality .good{
+    margin-top: 3.2rem;
+
+    font-size: 1.8rem;
+    color: #87ebcd;
+    font-weight: 700;
+}
+
+.air-quality .number{
+    margin-top: .4rem;
+
+    font-size: 4.8rem;
+    color: #E7E6FB;
+    font-weight: 700;
+}
+
+.air-quality .info{
+    display: flex;
+    align-items: center;
+}
+
+.air-quality .info .number{
+    font-weight: 700;
+    flex: 1;
+}
+
+.air-quality .info .number p{
+    font-size: 1.4rem;
+    color: #87EBCD;
+}
+
+.air-quality .info .number small{
+    font-size: 1.2rem;
+    color: #E7E6FB;
+}
